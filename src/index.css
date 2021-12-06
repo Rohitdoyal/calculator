@@ -1,13 +1,116 @@
-body {
+*{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+:root{
+  --primary:#d81e5b;
+  --secoundary:#0f44d8;
+  --dark:#000;
+  --light:#eee;
+
+  
+
+}
+
+body{
+  background-color: var(--light);
+}
+
+.App{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+
+}
+
+.heading{
+  color: rgb(67, 3, 139);
+  font-size: 40px;
+  display: flex;
+  position: absolute;
+  top :10px;
+  text-decoration: underline;
+  text-shadow: rgb(0, 3, 3);
+  text-decoration-color: #d81e5b
+  
+}
+
+.calculator{
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 2px 2px 56px black;
+
+}
+.display{
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light);
+
+  font-size: 24px;
+  font-weight: 300;
+
+}
+
+.display span{
+  color: gray;
+  font-size: 14px;
+
+}
+button{
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 6ms;
+
+}
+
+button:hover{
+  opacity: 0.9;
+  color: chartreuse;
+}
+
+.operator{
+  display: flex;
+
+}
+
+.operator button{
+  flex :1 1 0%;
+  background-color: var(--primary);
+  font-weight: 700;
+  
+}
+
+.digit{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.digit button{
+  flex:1 1 33.33333%;
+  max-width: 33.3333%;
+  background-color: var(--dark);
+  border: 1px solid var(--secoundary);
+
 }
